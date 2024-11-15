@@ -1,4 +1,23 @@
-<img src="https://cdn.jsdelivr.net/gh/shiyindaxiaojie/images/readme/icon.png" align="right" />
+---
+title: ZNOTE GUIDE
+date: 2020-03-26
+tags:
+ - vuepress
+categories:
+ - 规范 Standard
+isShowComments: true
+sidebar: false
+publish: true
+sticky: 1
+---
+
+<Boxx/>
+
+开始使用此博客的一些注意事项和说明。
+
+[[toc]]
+
+<!-- more -->
 
 # znote
 
@@ -32,7 +51,7 @@
 
 - 本仓库代码使用 [MIT](https://github.com/SigureMo/notev/blob/master/LICENSE) 协议进行开源，但是全部文档内容使用 [CC 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) 协议进行发布
 
-![](/docs/.vuepress/public/vuepress.png)
+![](/vuepress.png)
 
 ## 项目介绍
 
@@ -46,11 +65,11 @@
 - 克隆项目，在项目文件夹下执行命令，加载依赖：`npm install`
 
 - 在项目文件夹下执行命令运行项目：
-  
+
   node14 版本：`npm run dev`
-  
-  node16 版本及以上：`npm run dev:node:options` （在 Mac 上运行：`npm run dev:node:options:mac` ）
-  
+
+  node16 版本及以上：`npm run dev:node:16` （在 Mac 上运行：`npm run dev:node:16:mac`)
+
 - 待启动成功后打开地址即可：[http://localhost:8080/](http://localhost:8080/)
 
 ## 项目架构
@@ -133,3 +152,26 @@ publish: true
 - To be or not to be, ...
 ```
 
+## 写在最后
+
+在 Blog 搭建中遇到问题，推荐先去以下几个网址找答案：
+
+- vuepress官网：[https://vuepress.vuejs.org/zh/](https://vuepress.vuejs.org/zh/)
+- vuepress自定义开发主题：[https://vuepress.vuejs.org/zh/theme/writing-a-theme.html](https://vuepress.vuejs.org/zh/theme/writing-a-theme.html)
+- vuepress-theme-reco官网：[https://vuepress-theme-reco.recoluan.com/](https://vuepress-theme-reco.recoluan.com/)
+
+如果在博客中遇到什么问题，不要一上来就问我，最好先查下相关资料，实在解决不了的可以找我咨询哈（减少无效沟通嘛），毕竟只有自己淌过的坑才能深入理解、印象深刻！
+
+当然，遇到一些`有价值`的问题，还是欢迎来找我共同探讨的😉~~
+
+关于如何提问，在 Github 中这个项目可以说是相当 nice 了，可以的话一定要过一遍，于人于己都有莫大的好处：[提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)
+
+## 关于友链
+
+近期也发现有好些人要加 [友链](/other/friends.html) 的，在这里我也说一下吧：
+
+你可以复用我的 Blog，但是`需要在你的 Blog 创新一些东西`，比如添加你具有独立见解的文章，或者在其他方面体现自己独特的创意或价值（改改样式、优化一下功能等等），然后我给你加友链。毕竟千篇一律的友链没有必要是吧！
+
+*Thanks for you!*
+
+<Reward/>
