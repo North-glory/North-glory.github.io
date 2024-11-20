@@ -65,7 +65,7 @@ module.exports = {
     lastUpdated: true,
     lastUpdated: '上次更新', // string | boolean
     // 作者
-    author: 'z',
+    author: 'North-Glory',
     // 备案号
     record: '京ICP备17067634号-1',
     // 项目开始时间
