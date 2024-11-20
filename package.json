@@ -43,7 +43,7 @@
 		"vuepress-plugin-smooth-scroll": "^0.0.10",
 		"vuepress-theme-reco": "1.6.17",
 		"vuepress": "^1.9.10",
-		"js-yaml": "^3.14.1",
+		"js-yaml": "^4.1.0",
 		"axios": "^0.26.1",
 		"markdown-it-disable-url-encode": "^1.0.1",
 		"jquery": "^3.7.1",
