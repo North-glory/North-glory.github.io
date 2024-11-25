@@ -1,8 +1,5 @@
-##############################################################################
-## 现已通过 GitHub Actions 自动部署，只需 'git push' 即可自动部署
-## 若不想使用自动部署，可以直接运行命令 'npm run deploy' 本地自动提交部署
-##############################################################################
-
+#!/usr/bin/env sh
+ 
 # 确保脚本抛出遇到的错误
 set -e
 
@@ -12,6 +9,13 @@ rm -rf ../blog/dist/*
 
 # 将build生成的dist目录拷贝至上一层目录中
 cp -rf docs/.vuepress/dist ../blog/
+
+# 先提交本体项目
+git init
+git add -A
+git commit -m "记录本体项目代码修改部分"
+git branch -M main
+git push -f git@github.com:North-glory/NG-znote.git main
 
 # 进入生成的文件夹
 cd ../blog/dist

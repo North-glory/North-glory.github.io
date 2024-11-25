@@ -25,7 +25,7 @@ publish: true
 
 | 题目编号 | 题目名称   | 题目方向 | 难度 |
 | -------- | ---------- | -------- | ---- |
-| GFSJ0485 | simple_php | Web      | 2    |
+| GFSJ0485 | simple_php | Web      | 1    |
 
 <!-- more -->
 
