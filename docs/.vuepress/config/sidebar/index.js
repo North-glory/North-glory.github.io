@@ -67,9 +67,25 @@ module.exports = {
             title: '🔗 随笔 Essay',
             collapsable: true,
             children: [
-                'essay/20190928', 'essay/20191109', 'essay/20191116', 'essay/20191130', 'essay/20200227',
-                'essay/20200301', 'essay/20200703', 'essay/20200715', 'essay/20200813', 'essay/20201012',
-                'essay/20201119', 'essay/20211216', 'essay/20220808', 'essay/20230605',
+                'essay/2024-11-15-CTF-view_source-WriteUp',
+                'essay/2024-11-16-1-CTF-get_post-WriteUp',
+                'essay/2024-11-16-2-CTF-robots-WriteUp',
+                'essay/2024-11-16-3-CTF-backup-WriteUp',
+                'essay/2024-11-16-4-CTF-cookie-WriteUp',
+                'essay/2024-11-17-1-CTF-disabled_button-WriteUp',
+                'essay/2024-11-17-2-CTF-simple_js-WriteUp',
+                'essay/2024-11-17-3-CTF-xff_referer-WriteUp',
+                'essay/2024-11-17-4-CTF-weak_auth-WriteUp',
+                'essay/2024-11-19-1-CTF-command_execution-WriteUp',
+                'essay/2024-11-20-1-CTF-simple_php-WriteUp',
+                'essay/2024-11-23-1-CTF-3861-WriteUp',
+                'essay/2024-11-23-2-CTF-3862-WriteUp',
+                'essay/2024-11-24-1-CTF-3863-WriteUp',
+                'essay/2024-11-24-2-CTF-3871-WriteUp',
+                'essay/2024-11-24-3-CTF-3865-WriteUp',
+                'essay/2024-11-25-1-CTF-3867-WriteUp',
+                'essay/2024-11-26-1-CTF-3866-WriteUp',
+
             ]
         }
     ]

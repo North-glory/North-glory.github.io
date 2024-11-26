@@ -69,9 +69,9 @@ module.exports = {
     // 备案号
     record: '京ICP备17067634号-1',
     // 项目开始时间
-    startYear: '2019',
+    startYear: '2024',
     //git地址
-    repo: 'zpj80231',
+    repo: 'north-glory',
     // 如果你的文档不在仓库的根部
     docsDir: 'docs',
     // 可选，默认为 master
