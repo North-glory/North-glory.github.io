@@ -1,0 +1,101 @@
+---
+title: 20241205CTF学习笔记2
+date: 2024-12-05
+tags:
+ - CTF
+ - CTFLearning
+categories:
+   - 命理学 Numerology
+isShowComments: true
+publish: true
+
+
+
+
+
+
+
+
+---
+
+<Boxx/>
+
+从0开始学习CTF，了解CTF基本规则、方法，这是开始视频学习的第2天
+
+[[toc]]
+
+- 视频地址【[传送门](https://www.bilibili.com/video/BV1Lh411F7s8/)】
+
+<!-- more -->
+
+# 第1章：web基础题-01-弱类型问题
+
+#### 弱比较
+
+在PHP中，有两种相等比较
+
+| 符号 | 名称     | 判断方式                                 |
+| ---- | -------- | ---------------------------------------- |
+| ===  | 严格相等 | 会先判断两种字符串的类型是否相等，再比较 |
+| ==   | 弱相等   | 会先将字符串类型转化为相同，再比较       |
+
+```php
+<?php
+	var_dump("admin" == 0); //true
+	var_dump("1admin" == 1); //ture
+	var_dump("admin1"==1);//false
+	var_dump("admin1"==0);//true
+	var_dump("0e123456"=="0e456789");//ture 字符串相比较不需要转化为数字，e是科学计数法，意思0*10多少次方
+?>
+```
+
+记住转换规则，先看第一位是不是数字，如果是数字就转，不是数字以后就直接把后边扔掉
+
+eg：123admin转换后就是123
+
+eg：admin转化后就是0
+
+### 弱类型
+
+当一个字符串被当作一个数值来取值，其结果和类型如下：如果该字符串没有包含'.','e','E'并且其数值值在整形的范围内，该字符串被当作int来取值，其他所有情况下都被当作float来取值，该字符串的开始部分决定了它的值，如果该字符串以合法的数值开始，泽使用该数组，否则其值为0
+
+注：就是说正常情况下的字符串可以做加法，会被转化为数字，加和的结果会是float。非正常情况下会数字加上带字母的字符串再加和，得到的结果会是int
+
+```php
+<?php
+	$test=1+"10.5";//$test=11.5(float)
+	$test=1+"-1.3e3";//$test=-1299(float) 浮点数 1+(-1300)
+	$test=1+"bob-1.3e3";//$test=1(int)
+	$test=1+"2admin";//$test=3(int)
+	$test=1+"admin2";//$test=1(int)
+?>
+```
+
+升级版-练习题
+
+```php
+if(isset($_POST['message'])){
+    $message = json_decode($_POST['message']);
+    $key = "*******"; //保密
+    if ($message->key == $key){
+		echo "flag";
+    }
+    else {
+        echo "fail";
+    }
+}else{
+    echo "~~~";
+}
+```
+
+需要用POST方法，传入一个JSON格式的参数，要和key弱类型比较相等
+
+这里首先可以猜测这个$key的开头不是数字，当然这种方法并不保险，我们可以用burpsuite爆破，给这个地址传入一个叫message的参数，参数的值是一个JSON格式的字符串{"key":"xxxx"}，将这个xxxx替换为我们的字典，即可找到$keyd对应的值。或者用Python来写一个脚本，用request库写一个for循环，从0开始一次一次去请求。
+
+![image-20241205212045718](/img/essay/image-20241205212045718.png)
+
+上图是松散比较图
+
+![image-20241205212205058](/img/essay/image-20241205212205058.png)
+
+上图是严格比较图
