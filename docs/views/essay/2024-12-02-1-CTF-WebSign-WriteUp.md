@@ -1,6 +1,6 @@
 ---
 title: 吾杯网络安全技能大赛[Web方向]-Sign签到题
-date: 2024-21-2
+date: 2024-12-02
 tags:
  - CTF
  - WriteUP
